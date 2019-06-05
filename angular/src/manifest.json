@@ -17,5 +17,9 @@
     "assets/css/*",
     "assets/js/*",
     "assets/fonts/*"
-  ]
+  ],
+  // to speed up page load
+  "background": {
+    "page": "bg.html"
+  }
 }
