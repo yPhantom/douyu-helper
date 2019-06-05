@@ -18,8 +18,8 @@
     "assets/js/*",
     "assets/fonts/*"
   ],
-  // to speed up page load
   "background": {
-    "page": "bg.html"
+    "page": "bg.html",
+    "comment": "to speed up page load"
   }
 }
