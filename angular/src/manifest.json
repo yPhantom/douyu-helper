@@ -19,7 +19,7 @@
     "assets/fonts/*"
   ],
   "background": {
-    "page": "bg.html",
+    "scripts": ["background.js"],
     "comment": "to speed up page load"
   }
 }

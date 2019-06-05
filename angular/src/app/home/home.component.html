@@ -1,8 +1,10 @@
 <div class="menu-width menu-height" style="padding: 8px 0px">
   <tr class="menu-button menu-width menu-item">
     <mat-icon class="menu-icon">notifications_off</mat-icon>
-    <span class="menu-name">Disable alerts</span>
-    <mat-slide-toggle color="warn" class="menu-slider"></mat-slide-toggle>
+    <span class="menu-name">去除广告</span>
+    <mat-slide-toggle color="warn" class="menu-slider"
+                      (toggleChange)="onSlideChange()" (dragChange)="onSlideChange()"
+                      [checked]="isBlockAds"></mat-slide-toggle>
   </tr>
 </div>
 
