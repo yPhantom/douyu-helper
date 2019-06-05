@@ -33,6 +33,25 @@
   vertical-align: middle;
 }
 
+.menu-name {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.menu-slider {
+  vertical-align:middle;
+  margin-left: 40px;
+}
+
+.menu-item {
+  border-top: 2px solid #f4f8fb;
+  border-bottom: 2px solid #f4f8fb;
+}
+
+tr.menu-item:hover {
+  background: #f7fbff;
+}
+
 .example-section {
   display: flex;
   align-content: center;
