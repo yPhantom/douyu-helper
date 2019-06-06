@@ -5,7 +5,8 @@
   "description": "Have a good time in douyu.",
 
   "permissions": [
-    "https://www.douyu.com/*"
+    "https://www.douyu.com/*",
+    "storage"
   ],
   "browser_action": {
     "default_icon": "icon.png",
