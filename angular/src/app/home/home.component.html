@@ -6,5 +6,13 @@
                       (toggleChange)="onSlideChange()" (dragChange)="onSlideChange()"
                       [checked]="isBlockAds"></mat-slide-toggle>
   </tr>
+
+  <tr class="menu-button menu-width menu-item">
+    <mat-icon class="menu-icon">save_alt</mat-icon>
+    <span class="menu-name">弹幕下载</span>
+    <button mat-icon-button color="warn" class="menu-slider" aria-label="下载设置" (click)="openSettingDialog()">
+      <mat-icon >settings</mat-icon>
+    </button>
+  </tr>
 </div>
 
