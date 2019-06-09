@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SettingDialogComponent } from './setting-dialog.component';
+import { DanmuSettingsComponent } from './barrage-catch.component';
 
-describe('SettingDialogComponent', () => {
-  let component: SettingDialogComponent;
-  let fixture: ComponentFixture<SettingDialogComponent>;
+describe('DanmuSettingsComponent', () => {
+  let component: DanmuSettingsComponent;
+  let fixture: ComponentFixture<DanmuSettingsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SettingDialogComponent ]
+      declarations: [ DanmuSettingsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SettingDialogComponent);
+    fixture = TestBed.createComponent(DanmuSettingsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

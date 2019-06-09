@@ -1,18 +1,23 @@
-<div class="menu-width menu-height" style="padding: 8px 0px">
+<div *ngIf="!isShowProgress" class="menu-width menu-height" style="padding: 8px 0px">
   <tr class="menu-button menu-width menu-item">
     <mat-icon class="menu-icon">tv_off</mat-icon>
     <span class="menu-name">去除广告</span>
     <mat-slide-toggle color="warn" class="menu-slider"
-                      (toggleChange)="onSlideChange()" (dragChange)="onSlideChange()"
+                      (toggleChange)="clearAdsHandler()" (dragChange)="clearAdsHandler()"
                       [checked]="isBlockAds"></mat-slide-toggle>
   </tr>
 
   <tr class="menu-button menu-width menu-item">
-    <mat-icon class="menu-icon">save_alt</mat-icon>
-    <span class="menu-name">弹幕下载</span>
-    <button mat-icon-button color="warn" class="menu-slider" aria-label="下载设置" (click)="openSettingDialog()">
-      <mat-icon >settings</mat-icon>
+
+    <mat-icon *ngIf="!isCatchBarrage" class="menu-icon">save_alt</mat-icon>
+    <button *ngIf="isCatchBarrage" color="primary" mat-icon-button class="menu-button-icon" aria-label="下载设置" (click)="navigateToBarrageCatch()">
+      <mat-icon [matBadge]="barrageCount" matBadgeColor="warn" [matBadgeSize]="badgeSize">save_alt</mat-icon>
     </button>
+    <span class="menu-name">弹幕捕捉</span>
+
+    <mat-slide-toggle color="warn" class="menu-slider"
+                      (toggleChange)="catchBarrageHandler()" (dragChange)="catchBarrageHandler()"
+                      [checked]="isCatchBarrage"></mat-slide-toggle>
   </tr>
 </div>
 

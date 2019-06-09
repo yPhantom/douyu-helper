@@ -38,6 +38,11 @@
   vertical-align: middle;
 }
 
+.menu-button-icon {
+  margin-left: -8px;
+  margin-right: 8px;
+}
+
 .menu-slider {
   vertical-align:middle;
   margin-left: 64px;
@@ -56,4 +61,8 @@ tr.menu-item:hover {
   align-content: center;
   align-items: center;
   height: 60px;
+}
+
+tr button.menu-button-icon:hover {
+  background: #f6f6f6;
 }

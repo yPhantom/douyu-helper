@@ -1,0 +1,15 @@
+<div style="height: 140px">
+<div style="margin: 0 16px;">
+  <p style="font-size: 16px">
+    已捕获弹幕量数：{{barrageCount}}
+    <button mat-button matSuffix mat-icon-button style="margin-left: 24px;bottom: 2px" (click)="downloadBarrage()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </p>
+  <p style="font-size: 2px;color: #cccccc">出于安全性考虑，下载路径无法自定义，与浏览器默认路径一致</p>
+</div>
+  <div style="float: right">
+    <button mat-button (click)="showDefaultFolder()">打开默认文件夹</button>
+    <button mat-button routerLink="/home">返回</button>
+  </div>
+</div>

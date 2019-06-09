@@ -6,7 +6,9 @@
 
   "permissions": [
     "https://www.douyu.com/*",
-    "storage"
+    "storage",
+    "downloads",
+    "tabs"
   ],
   "browser_action": {
     "default_icon": "icon.png",
@@ -20,7 +22,12 @@
     "assets/fonts/*"
   ],
   "background": {
-    "page": "bg.html",
+    "scripts": ["background.js"],
     "comment": "to speed up page load"
-  }
+  },
+  "content_scripts": [{
+    "matches": ["https://www.douyu.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_start"
+  }]
 }
