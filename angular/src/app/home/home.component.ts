@@ -33,6 +33,16 @@ export class HomeComponent implements OnInit, AfterViewInit{
     chrome.storage.sync.set({isBlockAds: this.isBlockAds});
   }
 
+  customBarrageHandler(event): void {
+    //console.log(event);
+    chrome.tabs.create({url: event.target.baseURI + RouterManager.CUSTOM});
+    // this.router.navigate([RouterManager.CUSTOM], {
+    //   queryParams: {
+
+    //   }
+    // });
+  }
+
   ngAfterViewInit(): void {
     // Every time we open the popup, we need to read the settings saved in local storage.
     const storageKeys = [StorageManager.BLOCK_ADS_KEY];

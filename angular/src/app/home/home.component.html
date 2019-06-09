@@ -6,5 +6,13 @@
                       (toggleChange)="clearAdsHandler()" (dragChange)="clearAdsHandler()"
                       [checked]="isBlockAds"></mat-slide-toggle>
   </tr>
+
+  <tr class="menu-button menu-width menu-item">
+    <mat-icon class="menu-icon">settings</mat-icon>
+    <span class="menu-name">自定义弹幕</span>
+    <button mat-icon-button class="menu-button-icon" (click)="customBarrageHandler($event)">
+      <mat-icon>navigate_next</mat-icon>
+    </button>
+  </tr>
 </div>
 

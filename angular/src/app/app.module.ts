@@ -7,11 +7,13 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    CustomComponent,
   ],
   imports: [
     BrowserModule,

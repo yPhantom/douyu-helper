@@ -1,0 +1,18 @@
+<mat-form-field style="width: 100%">
+  <mat-chip-list #chipList aria-label="userName selection">
+    <mat-chip *ngFor="let userName of userNames" [selectable]="true"
+             [removable]="true" (removed)="remove(userName)">
+      {{userName}}
+      <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
+    </mat-chip>
+    <input
+           [matChipInputFor]="chipList"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           
+           (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+</mat-form-field>
+<div style="float: right">
+  <button mat-button (click)="saveHandler()">保存</button>
+  <button mat-button routerLink="/home">返回</button>
+</div>
