@@ -1,18 +1,57 @@
-<mat-form-field style="width: 100%">
-  <mat-chip-list #chipList aria-label="userName selection">
-    <mat-chip *ngFor="let userName of userNames" [selectable]="true"
-             [removable]="true" (removed)="remove(userName)">
-      {{userName}}
-      <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
-    </mat-chip>
-    <input
-           [matChipInputFor]="chipList"
-           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-           
-           (matChipInputTokenEnd)="add($event)">
-  </mat-chip-list>
-</mat-form-field>
-<div style="float: right">
-  <button mat-button (click)="saveHandler()">保存</button>
-  <button mat-button routerLink="/home">返回</button>
+<mat-toolbar color="primary" class="admin-header mat-elevation-z6">
+  <span>Angular Material Demo</span>
+  <a mat-button [routerLink]="['/', 'admin', 'categories']">
+    <span>首页</span>
+  </a>
+  <span class="toolbar-seprator"></span>
+  <button mat-icon-button routerLink="/admin/question">
+    <mat-icon>message</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-toolbar color="primary" class="admin-toolnav">
+  <span>Second Title</span>
+</mat-toolbar>
+
+<div>
+  <mat-sidenav-container class="admin-container">
+    <mat-sidenav class="admin-sidenav" opened="true" mode="side" #sideNav>
+      <mat-nav-list>
+        <h3 matSubheader>示范用页面</h3>
+        <a [routerLink]="['/', 'admin', 'question']" mat-list-item><i class="material-icons" style="margin-right: 20px;">edit</i>题目列表</a>
+
+        <mat-divider></mat-divider>
+
+        <h3 matSubheader>其他页面</h3>
+        <a [routerLink]="['/']" mat-list-item>Google</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content-padding">
+      <mat-form-field style="width: 100%">
+        <mat-chip-list #chipList aria-label="userName selection">
+          <mat-chip *ngFor="let userName of userNames" [selectable]="true"
+                    [removable]="true" (removed)="remove(userName)">
+            {{userName}}
+            <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
+          </mat-chip>
+          <input
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+
+            (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+      <div style="float: right">
+        <button mat-button (click)="saveHandler()">保存</button>
+        <button mat-button routerLink="/home">返回</button>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
+
+
+

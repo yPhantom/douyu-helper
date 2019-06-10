@@ -1,6 +1,5 @@
 /// <reference types="chrome"/>
 import {Component, OnInit, NgZone} from '@angular/core';
-import {Router} from '@angular/router';
 import {StorageManager} from '../common/storage.manager';
 import {RouterManager} from '../common/router.manager';
 import { HomeConstants } from '../common/home.constants';
@@ -14,14 +13,12 @@ export class HomeComponent implements OnInit{
   // The block ads flag
   isBlockAds: boolean;
   // background.js
-  bg: any;
+  bg: any = chrome.extension.getBackgroundPage();
 
   constructor(private ngZone: NgZone,
-              private router: Router
   ) {}
 
   ngOnInit() {
-    this.bg = chrome.extension.getBackgroundPage();
     const storageKeys = [StorageManager.BLOCK_ADS_KEY];
     chrome.storage.sync.get(storageKeys, items => {
       // Because the data-bind won't update the view in time. We need ngZone to update the view.
@@ -43,8 +40,6 @@ export class HomeComponent implements OnInit{
   customBarrageHandler(event): void {
     //console.log(event);
     this.bg.isLoadCustom = true;
-    chrome.tabs.create({url: 'dist/angular/index.html'}, tab => {
-
-    });
+    chrome.tabs.create({url: 'dist/angular/index.html'});
   }
 }
