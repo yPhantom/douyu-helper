@@ -21,6 +21,7 @@ export class CustomComponent implements OnInit {
   barrageSize: string;
   barrageColor: string;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+  bg: any = chrome.extension.getBackgroundPage();
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -31,6 +32,7 @@ export class CustomComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.bg.isLoadCustom = false;
   }
 
   add(event: MatChipInputEvent): void {

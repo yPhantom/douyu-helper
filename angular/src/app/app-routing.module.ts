@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {RouterManager} from './common/router.manager';
 import { CustomComponent } from './custom/custom.component';
+import {AppComponent} from "./app.component";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: RouterManager.HOME,
-    pathMatch: 'full'
+    component: AppComponent
   },
   {
     path: RouterManager.HOME,
@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: RouterManager.HOME
+    component: AppComponent
   }
 ];
 
