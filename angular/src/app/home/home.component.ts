@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit{
   }
 
   customBarrageHandler(event): void {
-    //console.log(event);
     this.bg.isLoadCustom = true;
     chrome.tabs.create({url: 'dist/angular/index.html'});
   }

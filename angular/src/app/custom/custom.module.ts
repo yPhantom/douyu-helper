@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CustomComponent} from "./custom/custom.component";
-import {MaterialModule} from "../material/material.module";
+import {CustomComponent} from './custom/custom.component';
+import {MaterialModule} from '../material/material.module';
 import { CustomRoutingModule } from './custom-routing.module';
 import { BarrageSkinComponent } from './barrage-skin/barrage-skin.component';
 
@@ -10,7 +10,7 @@ import { BarrageSkinComponent } from './barrage-skin/barrage-skin.component';
   imports: [
     CommonModule,
     MaterialModule,
-    CustomRoutingModule
+    CustomRoutingModule,
   ]
 })
 export class CustomModule { }

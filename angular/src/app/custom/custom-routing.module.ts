@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
-import {RouterManager} from "../common/router.manager";
-import {CustomComponent} from "./custom/custom.component";
-import {BarrageSkinComponent} from "./barrage-skin/barrage-skin.component";
+import {RouterModule, Routes} from '@angular/router';
+import {RouterManager} from '../common/router.manager';
+import {CustomComponent} from './custom/custom.component';
+import {BarrageSkinComponent} from './barrage-skin/barrage-skin.component';
 
 const routes: Routes = [
   {
@@ -24,7 +24,7 @@ const routes: Routes = [
       },
     ]
   },
-]
+];
 
 @NgModule({
   imports: [

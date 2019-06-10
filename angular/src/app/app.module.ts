@@ -5,24 +5,22 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { CustomComponent } from './custom/custom/custom.component';
-import { CustomModule } from './custom/custom/custom.module';
+import {FormsModule} from '@angular/forms';
+import {CustomComponent} from './custom/custom/custom.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CustomComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule,
-    CustomModule
+    FormsModule
   ],
   providers: [],
   entryComponents: [],
