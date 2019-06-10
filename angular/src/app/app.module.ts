@@ -7,7 +7,8 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { CustomComponent } from './custom/custom.component';
+import { CustomComponent } from './custom/custom/custom.component';
+import { CustomModule } from './custom/custom/custom.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CustomComponent } from './custom/custom.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    CustomModule
   ],
   providers: [],
   entryComponents: [],

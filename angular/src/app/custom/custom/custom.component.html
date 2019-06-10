@@ -31,7 +31,8 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="content-padding">
-      <mat-form-field style="width: 100%">
+      <h3>UserName</h3>
+      <mat-form-field style="width: 40%">
         <mat-chip-list #chipList aria-label="userName selection">
           <mat-chip *ngFor="let userName of userNames" [selectable]="true"
                     [removable]="true" (removed)="remove(userName)">
@@ -41,14 +42,9 @@
           <input
             [matChipInputFor]="chipList"
             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-
             (matChipInputTokenEnd)="add($event)">
         </mat-chip-list>
       </mat-form-field>
-      <div style="float: right">
-        <button mat-button (click)="saveHandler()">保存</button>
-        <button mat-button routerLink="/home">返回</button>
-      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
