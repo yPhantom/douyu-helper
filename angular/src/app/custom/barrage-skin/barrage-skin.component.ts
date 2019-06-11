@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatChipInputEvent} from "@angular/material";
-import {COMMA, ENTER} from "@angular/cdk/keycodes";
+import {MatChipInputEvent} from '@angular/material';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-barrage-skin',

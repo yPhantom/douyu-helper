@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import {RouterManager} from './common/router.manager';
 import { CustomComponent } from './custom/custom/custom.component';
 import {AppComponent} from './app.component';
-import {CustomRoutingModule} from "./custom/custom-routing.module";
+import {CustomRoutingModule} from './custom/custom-routing.module';
 
 const routes: Routes = [
   {
