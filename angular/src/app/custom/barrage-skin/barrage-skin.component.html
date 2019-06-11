@@ -1,3 +1,14 @@
-<p>
-  barrage-skin works!
-</p>
+<h3>UserName</h3>
+<mat-form-field style="width: 40%">
+  <mat-chip-list #chipList aria-label="userName selection">
+    <mat-chip *ngFor="let userName of userNames" [selectable]="true"
+              [removable]="true" (removed)="remove(userName)">
+      {{userName}}
+      <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
+    </mat-chip>
+    <input
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+</mat-form-field>

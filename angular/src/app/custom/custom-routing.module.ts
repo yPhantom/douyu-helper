@@ -15,12 +15,12 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: RouterManager.CUSTOM,
+        redirectTo: RouterManager.BARRAGE_SKIN,
         pathMatch: 'full'
       },
       {
         path: '**',
-        redirectTo: RouterManager.CUSTOM
+        redirectTo: RouterManager.BARRAGE_SKIN
       },
     ]
   },

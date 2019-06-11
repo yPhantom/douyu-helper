@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {CustomComponent} from './custom/custom/custom.component';
+import {BarrageSkinComponent} from "./custom/barrage-skin/barrage-skin.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CustomComponent
+    CustomComponent,
+    BarrageSkinComponent
   ],
   imports: [
     BrowserModule,

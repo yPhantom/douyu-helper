@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import {RouterManager} from './common/router.manager';
 import { CustomComponent } from './custom/custom/custom.component';
 import {AppComponent} from './app.component';
+import {CustomRoutingModule} from "./custom/custom-routing.module";
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: RouterManager.CUSTOM,
-    component: CustomComponent
+    loadChildren: './custom/custom-routing.module#CustomRoutingModule'
   },
   {
     path: '**',
@@ -25,7 +26,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), CustomRoutingModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
