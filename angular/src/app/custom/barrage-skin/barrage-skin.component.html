@@ -1,4 +1,4 @@
-<mat-form-field style="width: 40%">
+<mat-form-field style="width: 40%;font-size: 16px;">
   <mat-chip-list #chipList aria-label="userName selection">
     <mat-chip *ngFor="let userName of userNames" [selectable]="true"
               [removable]="true" (removed)="remove(userName)">
