@@ -38,7 +38,12 @@ export class HomeComponent implements OnInit{
   }
 
   customBarrageHandler(event): void {
-    this.bg.isLoadCustom = true;
+    this.bg.tabRouterFlag = RouterManager.BARRAGE_SKIN;
+    chrome.tabs.create({url: 'dist/angular/index.html'});
+  }
+
+  searchBarrageHandler(): void {
+    this.bg.tabRouterFlag = RouterManager.BARRAGE_SEARCH;
     chrome.tabs.create({url: 'dist/angular/index.html'});
   }
 }

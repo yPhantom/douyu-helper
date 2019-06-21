@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {RouterManager} from './common/router.manager';
-import { CustomComponent } from './custom/custom/custom.component';
+import { CustomComponent } from './barrage-custom/custom/custom.component';
 import {AppComponent} from './app.component';
-import {CustomRoutingModule} from './custom/custom-routing.module';
+import {CustomRoutingModule} from './barrage-custom/custom-routing.module';
 
 const routes: Routes = [
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: RouterManager.CUSTOM,
-    loadChildren: './custom/custom-routing.module#CustomRoutingModule'
+    loadChildren: './barrage-custom/custom-routing.module#CustomRoutingModule'
   },
   {
     path: '**',

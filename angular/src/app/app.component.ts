@@ -17,10 +17,10 @@ export class AppComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    if (this.bg.isLoadCustom) {
-      this.router.navigate([RouterManager.CUSTOM]);
-    } else {
+    if (this.bg.tabRouterFlag === RouterManager.HOME) {
       this.router.navigate([RouterManager.HOME]);
+    } else {
+      this.router.navigate([RouterManager.CUSTOM]);
     }
   }
 }

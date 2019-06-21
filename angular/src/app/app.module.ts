@@ -7,15 +7,17 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
-import {CustomComponent} from './custom/custom/custom.component';
-import {BarrageSkinComponent} from "./custom/barrage-skin/barrage-skin.component";
+import {CustomComponent} from './barrage-custom/custom/custom.component';
+import {BarrageSkinComponent} from "./barrage-custom/barrage-skin/barrage-skin.component";
+import { BarrageSearchComponent } from './barrage-custom/barrage-search/barrage-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CustomComponent,
-    BarrageSkinComponent
+    BarrageSkinComponent,
+    BarrageSearchComponent
   ],
   imports: [
     BrowserModule,
