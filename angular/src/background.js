@@ -7,6 +7,23 @@ var ERROR = 'ERROR';
 
 var isBlockAds = false;
 
+chrome.browserAction.onClicked.addListener(function (tab) {
+
+  var width = 800;
+  var height = 550;
+  var left = Math.round((screen.width / 2) - (width / 2));
+  var top = Math.round((screen.height / 2) - (height / 2));
+
+  chrome.windows.create({
+    url : 'dist/angular/index.html',
+    width : width,
+    height : height,
+    focused : true,
+    'left' : left,
+    'top' : top,
+    type : 'popup'
+  });
+});
 // Init the variables from chrome locally
 chrome.storage.sync.get(['isBlockAds'], items => {
   isBlockAds = items.isBlockAds;
