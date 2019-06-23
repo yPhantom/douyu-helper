@@ -1,0 +1,33 @@
+<mat-card style="height: 360px;top: 8px;">
+  <mat-card-content>
+    <div>
+      <mat-form-field appearance="outline" style="width: 670px;margin: 0 50px 0 50px;">
+        <mat-label>用户名</mat-label>
+        <input [(ngModel)]="userName"
+               (keyup.enter)="search(userName)"
+               matInput placeholder="回车搜索，目前只支持刀塔区部分房间">
+        <button mat-icon-button
+                matTooltip="Lucky Guy!"
+                matSuffix
+                (click)="getRandomName()"><mat-icon >casino</mat-icon></button>
+      </mat-form-field>
+
+      <mat-card id="barrage-list">
+        <mat-card-content>
+          <mat-tab-group [(selectedIndex)]="selectedRoomIndex" style="margin: -18px -17px 0 0">
+            <mat-tab *ngFor="let room of barrageRooms" label="{{getRoomName(room)}}">
+              <cdk-virtual-scroll-viewport style="height: 250px" itemSize="{{barrages.get(room).length}}">
+                <div *cdkVirtualFor="let barrage of barrages.get(room)" style="height: 24px">
+                    {{jsonBarrageToString(barrage)}}
+                </div>
+              </cdk-virtual-scroll-viewport>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+

@@ -1,4 +1,24 @@
-<div style="width: 250px;">
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <span>斗鱼小助手</span>
+  <a mat-button routerLink="/{{block}}">
+    <span>纯净模式</span>
+  </a>
+  <a mat-button routerLink="/{{follow}}">
+    <span>特殊关心</span>
+  </a>
+  <a mat-button routerLink="/{{search}}">
+    <span>弹幕查询</span>
+  </a>
+  <span class="toolbar-seprator"></span>
+  <button mat-icon-button routerLink="/{{setting}}">
+    <mat-icon>settings</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div id="container">
   <router-outlet></router-outlet>
 </div>
 
+<div id="footer">
+  <span>联系作者 541004828@qq.com</span>
+</div>

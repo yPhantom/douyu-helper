@@ -7,27 +7,32 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
-import {CustomComponent} from './barrage-custom/custom/custom.component';
-import {BarrageSkinComponent} from "./barrage-custom/barrage-skin/barrage-skin.component";
-import { BarrageSearchComponent } from './barrage-custom/barrage-search/barrage-search.component';
+import { BlockAdsComponent } from './block-ads/block-ads.component';
+import { FollowComponent } from './follow/follow.component';
+import { SearchComponent } from './search/search.component';
+import { SettingComponent } from './setting/setting.component';
+import {FishHttpService} from './service/fish-http.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CustomComponent,
-    BarrageSkinComponent,
-    BarrageSearchComponent
+    BlockAdsComponent,
+    FollowComponent,
+    SearchComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FishHttpService],
   entryComponents: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

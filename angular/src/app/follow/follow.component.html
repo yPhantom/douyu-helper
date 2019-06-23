@@ -6,9 +6,9 @@
       <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
     </mat-chip>
     <input placeholder="UserName"
-      [matChipInputFor]="chipList"
-      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      (matChipInputTokenEnd)="add($event)">
+           [matChipInputFor]="chipList"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           (matChipInputTokenEnd)="add($event)">
   </mat-chip-list>
 </mat-form-field>
 

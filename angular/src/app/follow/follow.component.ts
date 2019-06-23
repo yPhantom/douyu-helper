@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {MatChipInputEvent} from '@angular/material';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatChipInputEvent} from '@angular/material';
 
 @Component({
-  selector: 'app-barrage-skin',
-  templateUrl: './barrage-skin.component.html',
-  styleUrls: ['./barrage-skin.component.css']
+  selector: 'app-follow',
+  templateUrl: './follow.component.html',
+  styleUrls: ['./follow.component.css']
 })
-export class BarrageSkinComponent implements OnInit {
+export class FollowComponent implements OnInit {
 
   userNames: string[] = ['梅子酒青木马牛'];
   nameSize: string;

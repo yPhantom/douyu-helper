@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BarrageSkinComponent } from './barrage-skin.component';
+import { BlockAdsComponent } from './block-ads.component';
 
-describe('BarrageSkinComponent', () => {
-  let component: BarrageSkinComponent;
-  let fixture: ComponentFixture<BarrageSkinComponent>;
+describe('BlockAdsComponent', () => {
+  let component: BlockAdsComponent;
+  let fixture: ComponentFixture<BlockAdsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BarrageSkinComponent ]
+      declarations: [ BlockAdsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BarrageSkinComponent);
+    fixture = TestBed.createComponent(BlockAdsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

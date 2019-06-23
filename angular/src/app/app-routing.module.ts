@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {RouterManager} from './common/router.manager';
-import { CustomComponent } from './barrage-custom/custom/custom.component';
 import {AppComponent} from './app.component';
-import {CustomRoutingModule} from './barrage-custom/custom-routing.module';
+import {BlockAdsComponent} from './block-ads/block-ads.component';
+import {FollowComponent} from './follow/follow.component';
+import {SearchComponent} from './search/search.component';
+import {SettingComponent} from './setting/setting.component';
 
 const routes: Routes = [
   {
@@ -16,8 +18,20 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: RouterManager.CUSTOM,
-    loadChildren: './barrage-custom/custom-routing.module#CustomRoutingModule'
+    path: RouterManager.BLOCK_ADS,
+    component: BlockAdsComponent
+  },
+  {
+    path: RouterManager.FOLLOW,
+    component: FollowComponent
+  },
+  {
+    path: RouterManager.SEARCH,
+    component: SearchComponent
+  },
+  {
+    path: RouterManager.SETTING,
+    component: SettingComponent
   },
   {
     path: '**',
@@ -26,7 +40,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), CustomRoutingModule],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

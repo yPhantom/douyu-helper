@@ -15,7 +15,12 @@ import { MatButtonModule,
         MatChipsModule,
         MatToolbarModule,
         MatSidenavModule,
-        MatRadioModule} from '@angular/material';
+        MatRadioModule,
+        MatTabsModule,
+        MatButtonToggleModule,
+        MatTooltipModule} from '@angular/material';
+
+import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   exports: [
@@ -35,7 +40,11 @@ import { MatButtonModule,
     MatChipsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTabsModule,
+    MatButtonToggleModule,
+    MatTooltipModule,
+    ScrollDispatchModule
   ]
 })
 export class MaterialModule { }

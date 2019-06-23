@@ -9,41 +9,41 @@ import { HomeConstants } from '../common/home.constants';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
-  // The block ads flag
-  isBlockAds: boolean;
-  // background.js
-  bg: any = chrome.extension.getBackgroundPage();
-
-  constructor(private ngZone: NgZone,
-  ) {}
-
-  ngOnInit() {
-    const storageKeys = [StorageManager.BLOCK_ADS_KEY];
-    chrome.storage.sync.get(storageKeys, items => {
-      // Because the data-bind won't update the view in time. We need ngZone to update the view.
-      this.ngZone.run(() => {
-        this.isBlockAds = items.isBlockAds;
-      });
-    });
-  }
-
-  /**
-   * Call this handler to clear ads.
-   */
-  clearAdsHandler(): void {
-    this.isBlockAds = !this.isBlockAds; // change the flag value
-    this.bg.isBlockAds = this.isBlockAds; // save the value in chrome.js
-    chrome.storage.sync.set({isBlockAds: this.isBlockAds});
-  }
-
-  customBarrageHandler(event): void {
-    this.bg.tabRouterFlag = RouterManager.BARRAGE_SKIN;
-    chrome.tabs.create({url: 'dist/angular/index.html'});
-  }
-
-  searchBarrageHandler(): void {
-    this.bg.tabRouterFlag = RouterManager.BARRAGE_SEARCH;
-    chrome.tabs.create({url: 'dist/angular/index.html'});
-  }
+export class HomeComponent {
+  // // The block ads flag
+  // isBlockAds: boolean;
+  // // background.js
+  // bg: any = chrome.extension.getBackgroundPage();
+  //
+  // constructor(private ngZone: NgZone,
+  // ) {}
+  //
+  // ngOnInit() {
+  //   const storageKeys = [StorageManager.BLOCK_ADS_KEY];
+  //   chrome.storage.sync.get(storageKeys, items => {
+  //     // Because the data-bind won't update the view in time. We need ngZone to update the view.
+  //     this.ngZone.run(() => {
+  //       this.isBlockAds = items.isBlockAds;
+  //     });
+  //   });
+  // }
+  //
+  // /**
+  //  * Call this handler to clear ads.
+  //  */
+  // clearAdsHandler(): void {
+  //   this.isBlockAds = !this.isBlockAds; // change the flag value
+  //   this.bg.isBlockAds = this.isBlockAds; // save the value in chrome.js
+  //   chrome.storage.sync.set({isBlockAds: this.isBlockAds});
+  // }
+  //
+  // customBarrageHandler(event): void {
+  //   this.bg.tabRouterFlag = RouterManager.BARRAGE_SKIN;
+  //   chrome.tabs.create({url: 'dist/angular/index.html'});
+  // }
+  //
+  // searchBarrageHandler(): void {
+  //   this.bg.tabRouterFlag = RouterManager.BARRAGE_SEARCH;
+  //   chrome.tabs.create({url: 'dist/angular/index.html'});
+  // }
 }

@@ -7,20 +7,20 @@ import {RouterManager} from "./common/router.manager";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'angular';
   bg: any = chrome.extension.getBackgroundPage();
+
+  // router
+  block = RouterManager.BLOCK_ADS;
+  follow = RouterManager.FOLLOW;
+  search = RouterManager.SEARCH;
+  setting = RouterManager.SETTING;
 
   constructor(
     private router: Router
   ) {
 
   }
-  ngOnInit(): void {
-    if (this.bg.tabRouterFlag === RouterManager.HOME) {
-      this.router.navigate([RouterManager.HOME]);
-    } else {
-      this.router.navigate([RouterManager.CUSTOM]);
-    }
-  }
+  ngOnInit(): void {}
 }
