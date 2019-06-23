@@ -1,4 +1,4 @@
-import {Component, NgZone, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FishUtil} from '../common/fish.util';
 import {FishHttpService} from '../service/fish-http.service';
 import {DyConstants} from '../common/dy.constants';
@@ -18,7 +18,8 @@ interface Barrage {
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchComponent implements OnInit {
 
@@ -31,7 +32,7 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private httpClient: FishHttpService,
-    private ngZone: NgZone,
+    private ref: ChangeDetectorRef
   ) {
     this.initRoomMap();
   }
@@ -44,9 +45,8 @@ export class SearchComponent implements OnInit {
       return;
     }
     this.httpClient.get(DyConstants.BARRAGE_QUERY_URL, 'json', {userName}, (res) => {
-      this.ngZone.run(() => {
-        this.parseJsonBarrages(res);
-      });
+      this.parseJsonBarrages(res);
+      this.ref.detectChanges();
     });
   }
 
@@ -54,6 +54,7 @@ export class SearchComponent implements OnInit {
     const that = this;
     this.httpClient.get(DyConstants.RANDOM_NAME_URL, 'text', {}, (res) => {
       that.userName = res;
+      this.ref.detectChanges();
     });
   }
 

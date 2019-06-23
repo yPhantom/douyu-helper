@@ -16,15 +16,21 @@
         <mat-card-content>
           <mat-tab-group [(selectedIndex)]="selectedRoomIndex" style="margin: -18px -17px 0 0">
             <mat-tab *ngFor="let room of barrageRooms" label="{{getRoomName(room)}}">
-              <cdk-virtual-scroll-viewport style="height: 250px" itemSize="{{barrages.get(room).length}}">
-                <div *cdkVirtualFor="let barrage of barrages.get(room)" style="height: 24px">
-                    {{jsonBarrageToString(barrage)}}
-                </div>
-              </cdk-virtual-scroll-viewport>
+<!--              <cdk-virtual-scroll-viewport style="height: 250px" itemSize="24" minBufferPx="50" maxBufferPx="250">-->
+<!--                <div *cdkVirtualFor="let barrage of barrages.get(room)">-->
+<!--                    {{jsonBarrageToString(barrage)}}-->
+<!--                </div>-->
+<!--              </cdk-virtual-scroll-viewport>-->
+              <div style="width: 650px;height: 243px;margin-left: 2px;" class="scrollbar scrollbar-primary">
+                <tr class="force-overflow" *ngFor="let barrage of barrages.get(room)" >
+                  {{jsonBarrageToString(barrage)}}
+                </tr>
+              </div>
             </mat-tab>
           </mat-tab-group>
         </mat-card-content>
       </mat-card>
+
     </div>
   </mat-card-content>
 </mat-card>
