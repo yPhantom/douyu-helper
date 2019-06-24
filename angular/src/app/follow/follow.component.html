@@ -1,6 +1,6 @@
-<mat-form-field style="width: 40%;font-size: 16px;">
+<mat-form-field style="width: 88%;font-size: 16px;margin:20px 50px 0 50px">
   <mat-chip-list #chipList aria-label="userName selection">
-    <mat-chip *ngFor="let userName of userNames" [selectable]="true"
+    <mat-chip *ngFor="let userName of userNames" color="primary" [selectable]="true"
               [removable]="true" (removed)="remove(userName)">
       {{userName}}
       <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
@@ -10,9 +10,7 @@
            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
            (matChipInputTokenEnd)="add($event)">
   </mat-chip-list>
+  <mat-hint align="start">输入用户名后请按回车~</mat-hint>
+  <mat-hint align="end">{{userNames.length}}/15</mat-hint>
 </mat-form-field>
 
-<mat-radio-group aria-label="Select an option">
-  <mat-radio-button value="1">Option 1</mat-radio-button>
-  <mat-radio-button value="2">Option 2</mat-radio-button>
-</mat-radio-group>

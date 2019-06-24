@@ -28,7 +28,7 @@ export class FollowComponent implements OnInit {
     const value = event.value;
 
     // Add our userName
-    if ((value || '').trim()) {
+    if ((value || '').trim() && this.userNames.indexOf(value) === -1 && this.userNames.length <= 14) {
       this.userNames.push(value);
     }
 
