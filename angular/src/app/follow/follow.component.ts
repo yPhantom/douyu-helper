@@ -9,7 +9,7 @@ import {MatChipInputEvent} from '@angular/material';
 })
 export class FollowComponent implements OnInit {
 
-  userNames: string[] = ['梅子酒青木马牛'];
+  userNames: string[] = [];
   nameSize: string;
   nameColor: string;
 

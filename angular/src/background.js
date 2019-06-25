@@ -32,7 +32,6 @@ chrome.storage.sync.get(['isBlockAds'], items => {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.cmd === 'notifyFriendBarrage') {
     var barrage = request.params;
-    alert('ffff');
     chrome.notifications.create(null, {
       type: 'basic',
       iconUrl: 'icon.png',

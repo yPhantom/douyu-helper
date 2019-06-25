@@ -22,8 +22,7 @@ window.addEventListener('message', function (e) {
   }
 });
 
-function injectCustomJs(jsPath)
-{
+function injectCustomJs(jsPath) {
   jsPath = jsPath || 'inject.js';
   var temp = document.createElement('script');
   temp.setAttribute('type', 'text/javascript');
