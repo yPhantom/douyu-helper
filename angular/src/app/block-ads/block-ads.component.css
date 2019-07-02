@@ -1,0 +1,67 @@
+.menu-button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: 48px;
+  height: 48px;
+  padding: 0 24px;
+  text-align: left;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
+}
+
+.menu-width {
+  width: 220px;
+}
+
+.menu-height {
+  height: 140px;
+}
+
+.menu-icon {
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.menu-name {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.menu-button-icon {
+  margin-left: 40px;
+}
+
+.menu-slider {
+  vertical-align:middle;
+  margin-left: 64px;
+}
+
+.menu-item {
+  border-top: 2px solid #f4f8fb;
+}
+
+tr.menu-item:hover {
+  background: #f7fbff;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+tr button.menu-button-icon:hover {
+  background: #f6f6f6;
+}
