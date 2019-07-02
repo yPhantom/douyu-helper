@@ -1,27 +1,38 @@
 <div style="height:475px;overflow: scroll;">
 <mat-card style="padding: 25px;margin: 25px;">
-  <h2>去广告</h2>
-  <!--<div class="menu-width menu-height" style="padding: 8px 0px">-->
-    <!--<tr class="menu-button menu-width menu-item">-->
-      <!--<span class="menu-name">隐藏粉丝牌</span>-->
-      <!--<mat-slide-toggle color="warn" class="menu-slider"-->
-                        <!--(toggleChange)="onHideFansCardClick()" (dragChange)="onHideFansCardClick()"-->
-                        <!--[checked]="isHideFansCard"></mat-slide-toggle>-->
-    <!--</tr>-->
-  <!--</div>-->
+  <h2>聊天区</h2>
   <mat-selection-list>
     <mat-list-option (click)="onHideFansCardClick()" [selected]="isHideFansCard">
       隐藏粉丝牌
     </mat-list-option>
+
+    <!--TODO 等级弹幕过滤-->
+    <mat-list-option (click)="onHideUserLevelClick()" [selected]="isHideUserLevel">
+      隐藏用户等级
+    </mat-list-option>
+
+    <mat-list-option (click)="onHideMotorClick()" [selected]="isHideMotor">
+      隐藏车队名
+    </mat-list-option>
+
+    <!--类名为 Barrage-userEnter Barrage-userEnter--default -->
+    <mat-list-option (click)="onHideEnterClick()" [selected]="isHideEnter">
+      隐藏用户进入房间提示
+    </mat-list-option>
+
   </mat-selection-list>
 </mat-card>
 
 <mat-card style="padding: 25px;margin: 25px;">
-  <h2>test</h2>
+  <h2>广告</h2>
   <mat-selection-list>
     <mat-list-option>
-      dddd
+      一键去广告
     </mat-list-option>
+    <mat-list-option>
+      隐藏侧边活动页
+    </mat-list-option>
+
   </mat-selection-list>
 </mat-card>
 </div>

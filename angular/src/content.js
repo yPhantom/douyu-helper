@@ -6,11 +6,9 @@ var TITLE = 'title';
 
 injectCustomJs();
 window.addEventListener('message', function (e) {
-  console.log(e.data);
   if (e.data.barrage && e.data.barrage.nickName) {
     var barrage = e.data.barrage;
     if (barrage.nickName === '梅子酒青木马牛') {
-      console.log('enter print');
       chrome.runtime.sendMessage({cmd: 'notifyFriendBarrage', params: barrage}, function (response) {
         if (chrome.runtime.lastError) {
           // console.warn('Whoops.. ' + chrome.runtime.lastError.message);
